@@ -27,12 +27,27 @@ Scalable Vector Graphics
 ## **Svg elements:**
 
 
-## ✨ text: creates a text element
+## ✨ text: 
+creates a text element
 
 The text element adds text. The text can be selected using the mouse. x and y define the starting point of the text
 
 ```html
-Coming Soon..
+<text>
+  This is <tspan font-weight="bold" fill="red">bold and red</tspan>
+</text>
+```
+---
+## ✨ textPath
+This element fetches via its xlink:href attribute an arbitrary path and aligns the characters, that it encircles, along this path:
+
+```html
+<path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
+<text>
+  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
+    A curve.
+  </textPath>
+</text>
 ```
 
 ---
